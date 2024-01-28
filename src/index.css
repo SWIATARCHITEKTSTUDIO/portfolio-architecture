@@ -56,3 +56,9 @@
     overflow-x: hidden;
   }
 }
+
+.equal-spacing {
+  /* display: inline-block; */
+  white-space: nowrap;
+  letter-spacing: calc(100% - 1rem);
+}

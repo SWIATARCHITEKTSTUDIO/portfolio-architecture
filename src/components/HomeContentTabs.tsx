@@ -26,7 +26,7 @@ const HomeContentTabs = () => {
               : "lg:text-gray-500 text-white"
           }`}
         >
-          {language === "en" && `ABOUT `}
+          {language === "en" && `ABOUT US `}
           {language === "pl" && (
             <div className="tracking-[3px]">O PRACOWNI</div>
           )}
@@ -485,7 +485,7 @@ const HomeContentTabs = () => {
         },
         root: {
           className:
-            "flex flex-col w-full text-white pl-10 lg:px-0 lg:text-black gap-8  lg:gap-2 xl:gap-0  lg:flex-row justify-start items-center h-full",
+            "flex flex-col pt-4 w-full text-white pl-10 lg:px-0 lg:text-black gap-8  lg:gap-2 xl:gap-0  lg:flex-row justify-start items-center h-full",
         },
       }}
     >
@@ -807,6 +807,16 @@ const HomeContentTabs = () => {
                     style={{ fontSize: "1rem" }}
                   ></i>
                   Instagram
+                </a>
+                <a
+                  href="https://www.instagram.com/swiatarchitekt.pl?igsh=MnF3c2NwNXM5MjNj&utm_source=qr"
+                  className=" flex gap-2 items-center group"
+                >
+                  <i
+                    className="pi pi-facebook text-white lg:text-gray-500 font-bold group-hover:text-black"
+                    style={{ fontSize: "1rem" }}
+                  ></i>
+                  Facebook
                 </a>
               </div>
             </div>
