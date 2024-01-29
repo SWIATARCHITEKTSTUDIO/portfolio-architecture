@@ -23,7 +23,7 @@ const HomeContentTabs = () => {
           className={`${
             activeIndex === 0 && activeMobileIndex === 0
               ? "text-white font-bold lg:text-black"
-              : "lg:text-gray-500 text-white"
+              : "lg:text-gray-900 text-white"
           }`}
         >
           {language === "en" && `ABOUT US `}
@@ -139,7 +139,7 @@ const HomeContentTabs = () => {
           className={`${
             activeIndex === 1
               ? "text-white font-bold lg:text-black"
-              : "lg:text-gray-500 text-white"
+              : "lg:text-gray-900 text-white"
           }`}
         >
           {language === "en" && `PROCESS`}
@@ -243,7 +243,7 @@ const HomeContentTabs = () => {
           className={`${
             activeIndex === 2
               ? "text-white font-bold lg:text-black"
-              : "lg:text-gray-500 text-white"
+              : "lg:text-gray-900 text-white"
           }`}
         >
           {language === "en" && `OFFER`}
@@ -319,7 +319,7 @@ const HomeContentTabs = () => {
           className={`${
             activeIndex === 3
               ? "text-white font-bold lg:text-black"
-              : "lg:text-gray-500 text-white"
+              : "lg:text-gray-900 text-white"
           }`}
         >
           {" "}
@@ -386,7 +386,7 @@ const HomeContentTabs = () => {
               </div>
             )}
             {language === "de" && (
-              <div className="flex justify-between items-center  w-full">
+              <div className="flex flex-col  justify-center items-center  w-full">
                 <p>Adres:</p>
                 <p>
                   <a
@@ -400,7 +400,7 @@ const HomeContentTabs = () => {
               </div>
             )}
             {language === "pl" && (
-              <div className="flex justify-between items-center  w-full">
+              <div className="flex flex-col  justify-center items-center  w-full">
                 <p>Adres:</p>
                 <a
                   href="http://maps.google.com?q=54.49244318984959,18.540995605388876"
@@ -415,7 +415,7 @@ const HomeContentTabs = () => {
             <div className="mt-2 flex justify-between w-full gap-2">
               <a
                 href="https://www.linkedin.com/company/%C5%9Bwiat-%E2%97%8F-architekt/?viewAsMember=true"
-                className=" flex gap-2 items-center group"
+                className=" flex gap-2 items-center group text-white lg:text-black"
               >
                 <i
                   className="pi pi-linkedin text-white lg:text-gray-500 font-bold lg:group-hover:text-black"
@@ -425,13 +425,23 @@ const HomeContentTabs = () => {
               </a>
               <a
                 href="https://www.instagram.com/swiatarchitekt.pl?igsh=MnF3c2NwNXM5MjNj&utm_source=qr"
-                className=" flex gap-2 items-center group"
+                className=" flex gap-2 items-center group text-white lg:text-black"
               >
                 <i
                   className="pi pi-instagram text-white lg:text-gray-500 font-bold lg:group-hover:text-black"
                   style={{ fontSize: "1rem" }}
                 ></i>
                 Instagram
+              </a>
+              <a
+                href="https://www.instagram.com/swiatarchitekt.pl?igsh=MnF3c2NwNXM5MjNj&utm_source=qr"
+                className=" flex gap-2 items-center group text-white lg:text-black"
+              >
+                <i
+                  className="pi pi-facebook text-white lg:text-gray-900 font-bold group-hover:text-black"
+                  style={{ fontSize: "1rem" }}
+                ></i>
+                Facebook
               </a>
             </div>
 
@@ -707,113 +717,115 @@ const HomeContentTabs = () => {
            */}
           <div className="text-left flex-col w-full  gap-5 flex justify-center  ">
             <div className=" flex flex-col ">
-              <div className="flex justify-between items-center  w-full">
+              <div className="flex flex-col  justify-center items-center  w-full">
                 {language === "en" && (
-                  <div className="flex justify-between   w-full">
+                  <div className="flex flex-col  justify-center items-center  w-full">
                     <p className=" ">
                       Working Hours: <br />
                     </p>
-                    <p>Every Working Day 9:00 - 19:00</p>
+                    <p className="font-semibold">
+                      Every Working Day 9:00 - 19:00
+                    </p>
                   </div>
                 )}
                 {language === "pl" && (
-                  <div className="flex justify-between  w-full">
+                  <div className="flex flex-col  justify-center items-center  w-full">
                     <p className="">
                       czas pracy:
                       <br />
                     </p>
-                    <p>dni robocze 9:00 - 19:00</p>
+                    <p className="font-semibold">dni robocze 9:00 - 19:00</p>
                   </div>
                 )}
                 {language === "de" && (
-                  <div className="flex justify-between   w-full">
+                  <div className="flex flex-col  justify-center items-center  w-full">
                     <p className="">
                       Arbeit Zeit :
                       <br />
                     </p>
-                    <p>Arbeitstage 9:00 - 19:00</p>
+                    <p className="font-semibold">Arbeitstage 9:00 - 19:00</p>
                   </div>
                 )}
               </div>
-              <div className="flex justify-between items-center  w-full">
+              <div className="flex flex-col  justify-center items-center  w-full">
                 <p>Tel:</p>{" "}
-                <a href="tel:+48789486681" className="">
+                <a href="tel:+48789486681" className="font-semibold">
                   +48 789 486 681
                 </a>
               </div>
-              <div className="flex justify-between items-center  w-full">
+              <div className="flex flex-col  justify-center items-center  w-full">
                 <p>Email: </p>
                 <a
                   href="mailto:info@swiatarchitekt.pl"
-                  className=" hover:font-bold transform-all duration-300 ease-in"
+                  className=" hover:font-bold font-semibold transform-all duration-300 ease-in"
                 >
                   info@swiatarchitekt.pl
                 </a>
               </div>
               {language === "en" && (
-                <div className="flex justify-between items-center  w-full">
+                <div className="flex flex-col  justify-center items-center  w-full">
                   <p>Address:</p>
                   <a
                     href="http://maps.google.com?q=54.49244318984959,18.540995605388876"
                     target="_blank"
-                    className=" cursor-pointer"
+                    className=" cursor-pointer font-semibold"
                   >
                     <>Poland • Gdynia • Redłowo</>{" "}
                   </a>{" "}
                 </div>
               )}
               {language === "de" && (
-                <div className="flex justify-between items-center  w-full">
+                <div className="flex flex-col  justify-center items-center  w-full">
                   <p>Adres:</p>
                   <a
                     href="http://maps.google.com?q=54.49244318984959,18.540995605388876"
                     target="_blank"
-                    className=" cursor-pointer"
+                    className=" cursor-pointer font-semibold"
                   >
                     <p> Poland • Gdynia • Redłowo</p>{" "}
                   </a>{" "}
                 </div>
               )}
               {language === "pl" && (
-                <div className="flex justify-between items-center  w-full">
+                <div className="flex flex-col  justify-center items-center  w-full">
                   <p>Adres:</p>
                   <a
                     href="http://maps.google.com?q=54.49244318984959,18.540995605388876"
                     target="_blank"
-                    className=" cursor-pointer"
+                    className=" cursor-pointer font-semibold"
                   >
                     Polska • Gdynia • Redłowo
                   </a>{" "}
                 </div>
               )}
 
-              <div className="mt-2 flex justify-between w-full gap-2">
+              <div className="mt-2 flex justify-center w-full gap-2">
                 <a
                   href="https://www.linkedin.com/company/%C5%9Bwiat-%E2%97%8F-architekt/?viewAsMember=true"
-                  className=" flex gap-2 items-center group"
+                  className=" flex gap-2 items-center group text-white lg:text-black"
                 >
                   <i
-                    className="pi pi-linkedin text-white lg:text-gray-500 font-bold group-hover:text-black"
+                    className="pi pi-linkedin text-white lg:text-gray-900 font-bold group-hover:text-black"
                     style={{ fontSize: "1rem" }}
                   ></i>
                   LinkedIn
                 </a>
                 <a
                   href="https://www.instagram.com/swiatarchitekt.pl?igsh=MnF3c2NwNXM5MjNj&utm_source=qr"
-                  className=" flex gap-2 items-center group"
+                  className=" flex gap-2 items-center group text-white lg:text-black"
                 >
                   <i
-                    className="pi pi-instagram text-white lg:text-gray-500 font-bold group-hover:text-black"
+                    className="pi pi-instagram text-white lg:text-gray-900 font-bold group-hover:text-black"
                     style={{ fontSize: "1rem" }}
                   ></i>
                   Instagram
                 </a>
                 <a
                   href="https://www.instagram.com/swiatarchitekt.pl?igsh=MnF3c2NwNXM5MjNj&utm_source=qr"
-                  className=" flex gap-2 items-center group"
+                  className=" flex gap-2 items-center group text-black"
                 >
                   <i
-                    className="pi pi-facebook text-white lg:text-gray-500 font-bold group-hover:text-black"
+                    className="pi pi-facebook text-white lg:text-gray-900 font-bold group-hover:text-black"
                     style={{ fontSize: "1rem" }}
                   ></i>
                   Facebook
@@ -822,7 +834,7 @@ const HomeContentTabs = () => {
             </div>
             <div className=" text-justify">
               {language === "en" && (
-                <div className="text-justify">
+                <div className="text-center">
                   We are able to conduct meetings in the office and online,
                   including using virtual reality. To obtain more detailed
                   information, including an approximate quote and deadline,
@@ -834,7 +846,7 @@ const HomeContentTabs = () => {
               )}
 
               {language === "pl" && (
-                <div className="text-justify">
+                <div className="text-center">
                   Spotkania jesteśmy w stanie zrealizować w biurze oraz online,
                   w tym również korzystając z wirtualnej rzeczywistości. W celu
                   uzyskania bardziej szczegółowych informacji w tym przybliżonej
@@ -843,7 +855,7 @@ const HomeContentTabs = () => {
               )}
 
               {language === "de" && (
-                <div className="text-justify">
+                <div className="text-center">
                   Wir sind in der Lage, Meetings im Büro und online
                   durchzuführen, auch unter Einsatz von Virtual Reality. Für
                   nähere Informationen, inklusive eines ungefähren Angebots und

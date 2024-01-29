@@ -31,17 +31,13 @@ const ProjectContentTabs = ({
       onClick={options.onClick}
       className="flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-black hover:scale-110 transform duration-200 ease-in "
     >
-      <h1 className="text-gray-400 font-semibold">
+      <h1 className="text-gray-900 font-[400]">
         {" "}
         {language === "en" && `Project`}
         {language === "pl" && `Projekt`}
         {language === "de" && `Projekt`}
       </h1>
-      <p
-        className={` uppercase text-end ${
-          activeIndex === 0 ? "text-black" : "text-gray-500"
-        }`}
-      >
+      <p className={`text-black text-end text-sm xl:text-xl   `}>
         {title === "Duplex 2" ? (
           <>
             DUPLEX<sup>2</sup>
@@ -58,7 +54,7 @@ const ProjectContentTabs = ({
       onClick={options.onClick}
       className="flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-black hover:scale-110 transform duration-200 ease-in "
     >
-      <h1 className="text-gray-400 font-semibold">
+      <h1 className="text-gray-900 font-[400]">
         {date && (
           <>
             {language === "en" && `Year`}
@@ -67,13 +63,7 @@ const ProjectContentTabs = ({
           </>
         )}
       </h1>
-      <p
-        className={` uppercase text-end ${
-          activeIndex === 0 ? "text-black" : "text-gray-500"
-        }`}
-      >
-        {date}
-      </p>
+      <p className={`text-black text-end text-sm xl:text-xl   `}>{date}</p>
     </div>
   );
 
@@ -82,7 +72,7 @@ const ProjectContentTabs = ({
       onClick={options.onClick}
       className="flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-black hover:scale-110 transform duration-200 ease-in "
     >
-      <h1 className="text-gray-400 font-semibold">
+      <h1 className="text-gray-900 font-[400]">
         {location && (
           <>
             {language === "en" && `Location`}
@@ -91,13 +81,7 @@ const ProjectContentTabs = ({
           </>
         )}
       </h1>
-      <p
-        className={` uppercase text-end ${
-          activeIndex === 0 ? "text-black" : "text-gray-500"
-        }`}
-      >
-        {location}
-      </p>
+      <p className={`text-black text-end text-sm xl:text-xl   `}>{location}</p>
     </div>
   );
 
@@ -106,7 +90,7 @@ const ProjectContentTabs = ({
       onClick={options.onClick}
       className="flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-black hover:scale-110 transform duration-200 ease-in "
     >
-      <h1 className="text-gray-400 font-semibold">
+      <h1 className="text-gray-900 font-[400]">
         {area && (
           <>
             {language === "en" && `Area`}
@@ -116,8 +100,8 @@ const ProjectContentTabs = ({
         )}
       </h1>
       <p
-        className={` uppercase text-end ${
-          activeIndex === 0 ? "text-black" : "text-gray-500"
+        className={`text-black text-end text-sm xl:text-xl  ${
+          activeIndex === 0 ? "text-black" : "text-gray-900"
         }`}
       >
         {area}
@@ -180,7 +164,7 @@ const ProjectContentTabs = ({
       ></TabPanel>
       {/* ABOUT ME */}
       <TabPanel header="Header I" headerTemplate={tabOneHeaderTemplate}>
-        <div className=" w-full !text-justify text-pretty  text-gray-700 text-sm font-sans ">
+        <div className=" w-full !text-center text-pretty  text-black text-sm font-sans ">
           {description}
         </div>
       </TabPanel>

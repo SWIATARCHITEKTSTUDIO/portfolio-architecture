@@ -20,7 +20,10 @@ const Home = () => {
           className="text-white col-span-1 absolute hidden lg:flex top-[50%] z-50  w-full   px-6 h-fit   text-xl min-[420px]:text-2xl xl:text-4xl  justify-start   font-bold tracking-[6px] font-sans"
         >
           <h1 className="">
-            <p className="flex items-center w-full justify-start bg-white text-black px-3 py-2 rounded-md ">
+            <p
+              style={{ textShadow: "0 0 2px white" }}
+              className="flex items-center w-full justify-start  text-white px-3 py-2 rounded-md "
+            >
               ŚWIAT <span className="text-4xl"> ●</span> ARCHITEKT
             </p>
           </h1>
