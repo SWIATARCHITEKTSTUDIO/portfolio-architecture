@@ -3,7 +3,7 @@ import { project } from "./types";
 export const projects: project[] = [
   // title: "Crossplan",
   {
-    svg: ["/images/LEZNO_BIALE_KSZTALT7.svg"],
+    svg: ["/images/svg/project-crossplan.svg"],
     en: {
       title: "Crossplan",
       year: 2022,
@@ -34,7 +34,7 @@ export const projects: project[] = [
   },
   // ZYGZAK
   {
-    svg: ["/images/ZYZGZAK_KSZTAŁT6.svg"],
+    svg: ["/images/svg/project-zygzak.svg"],
     en: {
       title: "Loop",
       img: [
@@ -86,7 +86,7 @@ export const projects: project[] = [
   },
   // 	title: "loop",
   {
-    svg: ["/images/DOOKOLA_KSZTAŁT1.svg"],
+    svg: ["/images/svg/project-loop.svg"],
     en: {
       img: ["LOOP.jpg", "LOOP-2.webp", "LOOP-3.webp", "LOOP-4.webp"],
 
@@ -123,7 +123,7 @@ export const projects: project[] = [
   },
   // title: "Duplex2",
   {
-    svg: ["/images/BLIZNIAK2_BIALE_KSZTALT9.svg"],
+    svg: ["/images/svg/project-duplex2.svg"],
     en: {
       title: "Duplex 2",
       year: 2022,
@@ -155,7 +155,7 @@ export const projects: project[] = [
 
   // title: "2+2 holiday",
   {
-    svg: ["/images/DOUBLE-COUPLE_BIALE_KSZTALT4.svg"],
+    svg: ["/images/svg/project-2+2holiday.svg"],
     en: {
       title: "2+2 holiday",
       img: ["2+2HOLIDAY.jpg"], // Add image URLs if available
@@ -204,7 +204,7 @@ export const projects: project[] = [
   },
   // GREEN CORNERS
   {
-    svg: ["/images/Z-Z_KSZTAŁT5.svg"],
+    svg: ["/images/svg/project-greencornes.svg"],
     en: {
       title: "GREEN CORNERS",
       img: ["GREEN-CORNERS_1.jpg", "GREEN-CORNERS_2.jpg"],
@@ -265,7 +265,7 @@ export const projects: project[] = [
   },
   // SHOOTING RANGE
   {
-    // svg: ["/images/Z-Z_KSZTAŁT5.svg"],
+    svg: ["/images/svg/project-shhotingrage.svg"],
     en: {
       title: "Interruption",
       img: ["widok 1.jpg", "widok 2.jpg", "widok 3.jpg", "widok 5.jpg"],
@@ -301,7 +301,7 @@ export const projects: project[] = [
   },
   // ONLINE
   {
-    svg: ["/images/NA_LINI_KSZTAŁT3.svg"],
+    svg: ["/images/svg/project-online.svg"],
     en: {
       title: "ON LINE",
       img: ["ON-LINE_1.jpg", "ON-LINE_2.png", "ON-LINE_3.png"], // Add image URLs if available
@@ -311,7 +311,7 @@ export const projects: project[] = [
       coAuthor: "DG Daniel Goliński",
       description: `
       Taking advantage of the opportunities provided by the local development plan for partial use of a flat roof fits 
-      perfectly into the idea of ​​definitely cutting off from the public road. For this purpose, a straight front wall 
+      perfectly into the idea of​ ​definitely cutting off from the public road. For this purpose, a straight front wall 
       is designed, behind which there is an internal courtyard in front of the entrance, a garage and a garbage shelter. 
       After entering the courtyard with a tree, there is a staircase and an entrance hall, which reveals a spectacular 
       view behind the house through a terrace above which the above floor of the investment is partially located. From 
@@ -355,7 +355,7 @@ export const projects: project[] = [
   },
   // SPREAD
   {
-    svg: ["/images/ROZUSNIECIE_BIALE_KSZTALT8.svg"],
+    svg: ["/images/svg/project-spread.svg"],
     en: {
       title: "SPREAD",
       img: ["SPREAD.jpg"], // Add image URLs if available
@@ -402,7 +402,7 @@ export const projects: project[] = [
   },
   // OPPOSITE
   {
-    svg: ["/images/KU-SOBIE_KSZTAŁT2.svg"],
+    svg: ["/images/svg/project-opposite.svg"],
     en: {
       title: "OPPOSITE",
       img: ["lanowa.jpg"], // Add image URLs if available

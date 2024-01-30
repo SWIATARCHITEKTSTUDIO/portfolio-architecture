@@ -159,6 +159,7 @@ const ProjectContentTabs = ({
             src={svgItem}
             alt=""
             className="w-24 rounded-sm  text-black mb-2"
+            style={{ filter: "brightness(0) saturate(100%)" }}
           />
         ))}
       ></TabPanel>
