@@ -11,7 +11,13 @@ export const projects: project[] = [
       area: "350m",
       description:
         "The main idea of ​​the project is to increase the garden area by elevating the residential floors above the garden area, enabling maximum use of a relatively small plot, creating fully functional spaces for users under individual floors of the building. The arrangement of individual floors was planned in such a way as to guarantee privacy for residents and maximize sunlight from the east for the night area and from the south for the day area.",
-      img: ["CROSS-PLAN.jpg"],
+      img: [
+        "crossplan-1.jpg",
+        "crossplan-0.jpg",
+        "crossplan-2.jpg",
+        "crossplan-3.jpg",
+        "crossplan-4.jpg",
+      ],
     },
     pl: {
       title: "Crossplan",
@@ -20,7 +26,14 @@ export const projects: project[] = [
       area: "350m",
       description:
         "Dom jednorodzinny oparty na planie krzyża, który to jest łącznikiem komunikacyjnym 3 prostokątnych modułów domu znajdujących się pod jednym wspólnym dachem. Każdy z modułów przeznaczony jest na odmienna strefę w tym: nocną, dzienną oraz organizacyjną. Takie oddzielenie, nadaje intymności z każdej ze stref oraz dzieli dom na poszczególne obszary cieplne. Komunikacja oparta na dwóch osiach, przeszklona na jego końcach, generuje specjalnie wygenerowane widoki na ogród. Stwarza to wzajemne przenikanie się wnętrza i zewnętrza, tworząc dla mieszkańców codzienne okazje do korzystania z walorów starannie dobranych ",
-      img: ["CROSS-PLAN.jpg"],
+      // img: ["CROSS-PLAN.jpg"],
+      img: [
+        "crossplan-1.jpg",
+        "crossplan-0.jpg",
+        "crossplan-2.jpg",
+        "crossplan-3.jpg",
+        "crossplan-4.jpg",
+      ],
     },
     de: {
       title: "Crossplan",
@@ -29,7 +42,14 @@ export const projects: project[] = [
       area: "350m",
       description:
         "Die Hauptidee des Projekts besteht darin, die Gartenfläche durch die Anhebung der Wohngeschosse über den Gartenbereich zu vergrößern, um eine maximale Nutzung eines relativ kleinen Grundstücks zu ermöglichen und voll funktionsfähige Räume für die Nutzer unter den einzelnen Etagen des Gebäudes zu schaffen. Die Anordnung der einzelnen Etagen wurde so geplant, dass die Privatsphäre der Bewohner gewährleistet ist und die Sonneneinstrahlung von Osten für den Nachtbereich und von Süden für den Tagesbereich maximiert wird.",
-      img: ["CROSS-PLAN.jpg"],
+      // img: ["CROSS-PLAN.jpg"],
+      img: [
+        "crossplan-1.jpg",
+        "crossplan-0.jpg",
+        "crossplan-2.jpg",
+        "crossplan-3.jpg",
+        "crossplan-4.jpg",
+      ],
     },
   },
   // ZYGZAK

@@ -37,7 +37,7 @@ const ProjectContentTabs = ({
         {language === "pl" && `Projekt`}
         {language === "de" && `Projekt`}
       </h1>
-      <p className={`text-black text-end text-sm xl:text-xl   `}>
+      <p className={`text-black text-end text-sm xl:text-xl font-bold   `}>
         {title === "Duplex 2" ? (
           <>
             DUPLEX<sup>2</sup>
@@ -63,7 +63,9 @@ const ProjectContentTabs = ({
           </>
         )}
       </h1>
-      <p className={`text-black text-end text-sm xl:text-xl   `}>{date}</p>
+      <p className={`text-black text-end text-sm xl:text-xl font-bold   `}>
+        {date}
+      </p>
     </div>
   );
 
@@ -81,7 +83,9 @@ const ProjectContentTabs = ({
           </>
         )}
       </h1>
-      <p className={`text-black text-end text-sm xl:text-xl   `}>{location}</p>
+      <p className={`text-black text-end text-sm xl:text-xl font-bold   `}>
+        {location}
+      </p>
     </div>
   );
 
@@ -100,7 +104,7 @@ const ProjectContentTabs = ({
         )}
       </h1>
       <p
-        className={`text-black text-end text-sm xl:text-xl  ${
+        className={`text-black text-end text-sm xl:text-xl font-bold  ${
           activeIndex === 0 ? "text-black" : "text-gray-900"
         }`}
       >
@@ -144,11 +148,11 @@ const ProjectContentTabs = ({
         },
         nav: {
           className:
-            "flex  lg:flex-col w-full justify-start  lg:justify-end lg:w-36 xl:w-64  items-end text-left uppercase",
+            "relative flex lg:flex-col w-full justify-start  lg:justify-end lg:w-36 xl:w-64  items-end text-left uppercase",
         },
         root: {
           className:
-            "flex flex-col absolute  w-full gap-8  lg:gap-2 xl:gap-8  lg:flex-row justify-start items-center h-full",
+            " flex flex-col absolute  w-full gap-8  lg:gap-2 xl:gap-8  lg:flex-row justify-start items-center h-full",
         },
       }}
     >
@@ -158,7 +162,7 @@ const ProjectContentTabs = ({
             key={`svg-${index}`}
             src={svgItem}
             alt=""
-            className="w-24 rounded-sm  text-black mb-2"
+            className="w-24 absolute top-[-50%] right-0 rounded-sm  text-black mb-2"
             style={{ filter: "brightness(0) saturate(100%)" }}
           />
         ))}

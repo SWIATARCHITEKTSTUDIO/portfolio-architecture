@@ -501,7 +501,7 @@ const HomeContentTabs = () => {
     >
       {/* ABOUT ME */}
       <TabPanel header="Header I" headerTemplate={tabOneHeaderTemplate}>
-        <div className="hidden lg:flex w-full text-sm lg:text-[0.7rem] xl:text-[0.8rem] 	    xl:text-center font-sans">
+        <div className="hidden  lg:flex w-[85%] m-auto text-sm lg:text-[0.7rem] xl:text-[0.8rem] 	    xl:text-center font-sans">
           {language === "en" && (
             <>
               {" "}
