@@ -3,7 +3,7 @@ import { project } from "./types";
 export const projects: project[] = [
   // title: "Crossplan",
   {
-    svg: ["/images/LEZNO_BIALE_KSZTALT7.svg"],
+    svg: ["/images/svg/project-crossplan.svg"],
     en: {
       title: "Crossplan",
       year: 2022,
@@ -11,7 +11,13 @@ export const projects: project[] = [
       area: "350m",
       description:
         "The main idea of ​​the project is to increase the garden area by elevating the residential floors above the garden area, enabling maximum use of a relatively small plot, creating fully functional spaces for users under individual floors of the building. The arrangement of individual floors was planned in such a way as to guarantee privacy for residents and maximize sunlight from the east for the night area and from the south for the day area.",
-      img: ["CROSS-PLAN.jpg"],
+      img: [
+        "crossplan-1.jpg",
+        "crossplan-0.jpg",
+        "crossplan-2.jpg",
+        "crossplan-3.jpg",
+        "crossplan-4.jpg",
+      ],
     },
     pl: {
       title: "Crossplan",
@@ -20,7 +26,14 @@ export const projects: project[] = [
       area: "350m",
       description:
         "Dom jednorodzinny oparty na planie krzyża, który to jest łącznikiem komunikacyjnym 3 prostokątnych modułów domu znajdujących się pod jednym wspólnym dachem. Każdy z modułów przeznaczony jest na odmienna strefę w tym: nocną, dzienną oraz organizacyjną. Takie oddzielenie, nadaje intymności z każdej ze stref oraz dzieli dom na poszczególne obszary cieplne. Komunikacja oparta na dwóch osiach, przeszklona na jego końcach, generuje specjalnie wygenerowane widoki na ogród. Stwarza to wzajemne przenikanie się wnętrza i zewnętrza, tworząc dla mieszkańców codzienne okazje do korzystania z walorów starannie dobranych ",
-      img: ["CROSS-PLAN.jpg"],
+      // img: ["CROSS-PLAN.jpg"],
+      img: [
+        "crossplan-1.jpg",
+        "crossplan-0.jpg",
+        "crossplan-2.jpg",
+        "crossplan-3.jpg",
+        "crossplan-4.jpg",
+      ],
     },
     de: {
       title: "Crossplan",
@@ -29,12 +42,19 @@ export const projects: project[] = [
       area: "350m",
       description:
         "Die Hauptidee des Projekts besteht darin, die Gartenfläche durch die Anhebung der Wohngeschosse über den Gartenbereich zu vergrößern, um eine maximale Nutzung eines relativ kleinen Grundstücks zu ermöglichen und voll funktionsfähige Räume für die Nutzer unter den einzelnen Etagen des Gebäudes zu schaffen. Die Anordnung der einzelnen Etagen wurde so geplant, dass die Privatsphäre der Bewohner gewährleistet ist und die Sonneneinstrahlung von Osten für den Nachtbereich und von Süden für den Tagesbereich maximiert wird.",
-      img: ["CROSS-PLAN.jpg"],
+      // img: ["CROSS-PLAN.jpg"],
+      img: [
+        "crossplan-1.jpg",
+        "crossplan-0.jpg",
+        "crossplan-2.jpg",
+        "crossplan-3.jpg",
+        "crossplan-4.jpg",
+      ],
     },
   },
   // ZYGZAK
   {
-    svg: ["/images/ZYZGZAK_KSZTAŁT6.svg"],
+    svg: ["/images/svg/project-zygzak.svg"],
     en: {
       title: "Loop",
       img: [
@@ -86,7 +106,7 @@ export const projects: project[] = [
   },
   // 	title: "loop",
   {
-    svg: ["/images/DOOKOLA_KSZTAŁT1.svg"],
+    svg: ["/images/svg/project-loop.svg"],
     en: {
       img: ["LOOP.jpg", "LOOP-2.webp", "LOOP-3.webp", "LOOP-4.webp"],
 
@@ -123,7 +143,7 @@ export const projects: project[] = [
   },
   // title: "Duplex2",
   {
-    svg: ["/images/BLIZNIAK2_BIALE_KSZTALT9.svg"],
+    svg: ["/images/svg/project-duplex2.svg"],
     en: {
       title: "Duplex 2",
       year: 2022,
@@ -155,7 +175,7 @@ export const projects: project[] = [
 
   // title: "2+2 holiday",
   {
-    svg: ["/images/DOUBLE-COUPLE_BIALE_KSZTALT4.svg"],
+    svg: ["/images/svg/project-2+2holiday.svg"],
     en: {
       title: "2+2 holiday",
       img: ["2+2HOLIDAY.jpg"], // Add image URLs if available
@@ -204,7 +224,7 @@ export const projects: project[] = [
   },
   // GREEN CORNERS
   {
-    svg: ["/images/Z-Z_KSZTAŁT5.svg"],
+    svg: ["/images/svg/project-greencornes.svg"],
     en: {
       title: "GREEN CORNERS",
       img: ["GREEN-CORNERS_1.jpg", "GREEN-CORNERS_2.jpg"],
@@ -265,7 +285,7 @@ export const projects: project[] = [
   },
   // SHOOTING RANGE
   {
-    // svg: ["/images/Z-Z_KSZTAŁT5.svg"],
+    svg: ["/images/svg/project-shhotingrage.svg"],
     en: {
       title: "Interruption",
       img: ["widok 1.jpg", "widok 2.jpg", "widok 3.jpg", "widok 5.jpg"],
@@ -301,7 +321,7 @@ export const projects: project[] = [
   },
   // ONLINE
   {
-    svg: ["/images/NA_LINI_KSZTAŁT3.svg"],
+    svg: ["/images/svg/project-online.svg"],
     en: {
       title: "ON LINE",
       img: ["ON-LINE_1.jpg", "ON-LINE_2.png", "ON-LINE_3.png"], // Add image URLs if available
@@ -311,7 +331,7 @@ export const projects: project[] = [
       coAuthor: "DG Daniel Goliński",
       description: `
       Taking advantage of the opportunities provided by the local development plan for partial use of a flat roof fits 
-      perfectly into the idea of ​​definitely cutting off from the public road. For this purpose, a straight front wall 
+      perfectly into the idea of​ ​definitely cutting off from the public road. For this purpose, a straight front wall 
       is designed, behind which there is an internal courtyard in front of the entrance, a garage and a garbage shelter. 
       After entering the courtyard with a tree, there is a staircase and an entrance hall, which reveals a spectacular 
       view behind the house through a terrace above which the above floor of the investment is partially located. From 
@@ -355,7 +375,7 @@ export const projects: project[] = [
   },
   // SPREAD
   {
-    svg: ["/images/ROZUSNIECIE_BIALE_KSZTALT8.svg"],
+    svg: ["/images/svg/project-spread.svg"],
     en: {
       title: "SPREAD",
       img: ["SPREAD.jpg"], // Add image URLs if available
@@ -402,7 +422,7 @@ export const projects: project[] = [
   },
   // OPPOSITE
   {
-    svg: ["/images/KU-SOBIE_KSZTAŁT2.svg"],
+    svg: ["/images/svg/project-opposite.svg"],
     en: {
       title: "OPPOSITE",
       img: ["lanowa.jpg"], // Add image URLs if available
@@ -454,4 +474,5 @@ export const projects: project[] = [
 export enum actionTypes {
   UPDATE_LOADER_TIME = "UPDATE_LOADER_TIME",
   UPDATE_LANGUAGE = "UPDATE_LANGUAGE",
+  UPDATE_THEME = "UPDATE_THEME",
 }

@@ -4,15 +4,18 @@ import { actionTypes, projects } from "../utils/consts";
 import { project } from "../utils/types";
 import { useProjectContext } from "../context/context";
 import { useState } from "react";
+import BlackWhiteTheme from "../components/BlackWhiteTheme";
 
 const Home = () => {
   const { state, dispatch } = useProjectContext();
-  const { language } = state;
+  const { language, theme } = state;
   const [showProject, setShowProject] = useState("");
 
   return (
     <>
-      <div className="min-h-screen cursor-auto lg:cursor-none h-screen overflow-hidden max-h-screen relative bg-black lg:bg-white font-sans">
+      <div
+        className={`min-h-screen cursor-auto lg:cursor-none h-screen overflow-hidden max-h-screen relative bg-${theme.bg} lg:bg-${theme.bg} font-sans`}
+      >
         <h1
           style={{
             transform: "translate(60%,-50%)",
@@ -30,7 +33,9 @@ const Home = () => {
         </h1>
 
         <h1 className="lg:hidden">
-          <p className=" py-3 font-bold max-[300px]:tracking-[1px] max-[350px]:tracking-[2px] max-[400px]:tracking-[4px] max-[450px]:tracking-[7px] max-[500px]:tracking-[12px] max-[550px]:tracking-[14px] max-[600px]:tracking-[18px] max-[650px]:tracking-[22px] max-[700px]:tracking-[25px] max-[750px]:tracking-[28px] max-[800px]:tracking-[28px] max-[900px]:tracking-[31px] tracking-[35px] bg-white  text-black justify-center  px-3  text-[1.75rem] md:text-[2.25rem] flex items-center w-full">
+          <p
+            className={`py-3 font-bold max-[300px]:tracking-[1px] max-[350px]:tracking-[2px] max-[400px]:tracking-[4px] max-[450px]:tracking-[7px] max-[500px]:tracking-[12px] max-[550px]:tracking-[14px] max-[600px]:tracking-[18px] max-[650px]:tracking-[22px] max-[700px]:tracking-[25px] max-[750px]:tracking-[28px] max-[800px]:tracking-[28px] max-[900px]:tracking-[31px] tracking-[35px] bg-${theme.bg}  text-${theme.text} ml-2 justify-center  px-3  text-[1.75rem] md:text-[2.25rem] flex items-center w-full`}
+          >
             ŚWIAT <span className="text-4xl"> ●</span> ARCHITEKT
           </p>
         </h1>
@@ -79,7 +84,9 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 mobile-height lg:h-auto lg:grid-cols-12  relative gap-0 bg-black lg:bg-white w-[100%] overflow-y-auto">
+        <div
+          className={`grid grid-cols-1 mobile-height lg:h-auto lg:grid-cols-12  relative gap-0 bg-{${theme.bg}} lg:bg-${theme.bg} w-[100%] overflow-y-auto`}
+        >
           <div
             className="pr-10 relative lg:max-h-screen  md:mt-12 lg:mt-0 lg:sticky top-0 lg:pl-10 xl:pl-20 flex flex-col  w-screen lg:w-full
 				  justify-start col-span-1  lg:col-span-7
@@ -89,7 +96,7 @@ const Home = () => {
             <div className=" absolute bottom-4 hidden lg:flex gap-0 self-end  tracking-[2px] font-semibold text-xs">
               <p
                 className={` cursor-pointer ${
-                  language === "pl" ? "text-black" : "text-gray-400"
+                  language === "pl" ? `text-${theme.text}` : "text-gray-400"
                 }`}
                 onClick={() =>
                   dispatch({
@@ -103,7 +110,7 @@ const Home = () => {
               <p className="text-gray-400">/</p>
               <p
                 className={` cursor-pointer ${
-                  language === "en" ? "text-black" : "text-gray-400"
+                  language === "en" ? `text-${theme.text}` : "text-gray-400"
                 }`}
                 onClick={() =>
                   dispatch({
@@ -130,6 +137,7 @@ const Home = () => {
                 DE
               </p>
             </div>
+            <BlackWhiteTheme />
           </div>
           <div className=" flex flex-col   lg:min-h-screen lg:max-h-screen  h-full md:h-screen relative  w-full col-span-1 lg:col-span-5">
             {projects.map((item: project) => (
@@ -149,12 +157,13 @@ const Home = () => {
                       src={`/images/${item.en.img[0]}`}
                       alt={item.en.img[0]}
                     />
-                    {/* <div className="2xl:w-10/12 w-11/12  flex justify-between  items-center mt-32  "></div> */}
                   </section>
                   <div
                     className={`${
                       showProject === item.en.title ? "grid" : "hidden"
-                    }  grid-cols-1 gap-y-4 sm:gap-2  sm:grid-cols-12  items-center text-white`}
+                    }  grid-cols-1 gap-y-4 sm:gap-2  sm:grid-cols-12  items-center text-${
+                      theme.text
+                    }`}
                   >
                     <div className="text-justify col-span-1 sm:col-span-8 w-full px-10  sm:py-10   flex justify-start h-full text-xs">
                       {item[language]?.description}

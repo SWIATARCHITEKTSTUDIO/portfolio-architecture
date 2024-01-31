@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useProjectContext } from "../context/context";
 const HomeContentTabs = () => {
   const { state } = useProjectContext();
-  const { language } = state;
+  const { language, theme } = state;
   const [activeIndex, setActiveIndex] = useState(0);
   const [activeMobileIndex, setActiveMobileIndex] = useState(-1);
 
@@ -17,13 +17,13 @@ const HomeContentTabs = () => {
           setActiveIndex(0);
           // options.onClick();
         }}
-        className="flex w-full text-sm xl:text-xl tracking-[6px] cursor-pointer gap-2 justify-end lg:justify-center items-center  hover:text-black hover:font-bold transform duration-500 ease-in"
+        className={`flex w-full text-sm xl:text-xl tracking-[6px] cursor-pointer gap-2 justify-end lg:justify-center items-center  hover:text-${theme.text} hover:font-bold transform duration-500 ease-in`}
       >
         <p
           className={`${
             activeIndex === 0 && activeMobileIndex === 0
-              ? "text-white font-bold lg:text-black"
-              : "lg:text-gray-900 text-white"
+              ? `text-${theme.text} font-bold lg:text-${theme.text}`
+              : `lg:text-${theme.text} text-${theme.text}`
           }`}
         >
           {language === "en" && `ABOUT US `}
@@ -133,13 +133,13 @@ const HomeContentTabs = () => {
           setActiveIndex(1);
           // options.onClick();
         }}
-        className="flex cursor-pointer text-sm xl:text-xl  tracking-[2px] xl:tracking-[6px]  gap-2 justify-end lg:justify-center items-center  hover:text-black hover:font-semibold transform duration-500 ease-in  "
+        className={`flex cursor-pointer text-sm xl:text-xl  tracking-[2px] xl:tracking-[6px]  gap-2 justify-end lg:justify-center items-center  hover:text-${theme.text} hover:font-semibold transform duration-500 ease-in `}
       >
         <p
           className={`${
             activeIndex === 1
-              ? "text-white font-bold lg:text-black"
-              : "lg:text-gray-900 text-white"
+              ? `text-${theme.text} font-bold lg:text-${theme.text}`
+              : `lg:text-${theme.text} text-${theme.text}`
           }`}
         >
           {language === "en" && `PROCESS`}
@@ -237,13 +237,13 @@ const HomeContentTabs = () => {
           setActiveIndex(2);
           // options.onClick();
         }}
-        className="flex cursor-pointer text-sm xl:text-xl  tracking-[2px] xl:tracking-[6px]  gap-2 justify-end lg:justify-center items-center  hover:text-black hover:font-bold transform duration-500 ease-in "
+        className={`flex cursor-pointer text-sm xl:text-xl  tracking-[2px] xl:tracking-[6px]  gap-2 justify-end lg:justify-center items-center  hover:text-${theme.text}s hover:font-bold transform duration-500 ease-in `}
       >
         <p
           className={`${
             activeIndex === 2
-              ? "text-white font-bold lg:text-black"
-              : "lg:text-gray-900 text-white"
+              ? `text-${theme.text} font-bold lg:text-${theme.text}`
+              : `lg:text-${theme.text} text-${theme.text}`
           }`}
         >
           {language === "en" && `OFFER`}
@@ -313,13 +313,13 @@ const HomeContentTabs = () => {
           setActiveIndex(3);
           // options.onClick();
         }}
-        className="flex text-sm xl:text-xl  tracking-[2px] xl:tracking-[6px] cursor-pointer justify-end lg:justify-center items-center  hover:text-black hover:font-bold transform duration-500 ease-in "
+        className={`flex text-sm xl:text-xl  tracking-[2px] xl:tracking-[6px] cursor-pointer justify-end lg:justify-center items-center  hover:text-${theme.text} hover:font-bold transform duration-500 ease-in`}
       >
         <p
           className={`${
             activeIndex === 3
-              ? "text-white font-bold lg:text-black"
-              : "lg:text-gray-900 text-white"
+              ? `text-${theme.text} font-bold lg:text-${theme.text}`
+              : `lg:text-${theme.text} text-${theme.text}`
           }`}
         >
           {" "}
@@ -365,7 +365,7 @@ const HomeContentTabs = () => {
               </a>
             </div>
             <div className="flex justify-between items-center  w-full">
-              <p>Email: </p>
+              <p>Email:</p>
               <a
                 href="mailto:info@swiatarchitekt.pl"
                 className=" hover:font-bold transform-all duration-300 ease-in"
@@ -386,7 +386,7 @@ const HomeContentTabs = () => {
               </div>
             )}
             {language === "de" && (
-              <div className="flex flex-col  justify-center items-center  w-full">
+              <div className="flex   justify-between items-center  w-full">
                 <p>Adres:</p>
                 <p>
                   <a
@@ -400,7 +400,7 @@ const HomeContentTabs = () => {
               </div>
             )}
             {language === "pl" && (
-              <div className="flex flex-col  justify-center items-center  w-full">
+              <div className="flex  justify-between items-center  w-full">
                 <p>Adres:</p>
                 <a
                   href="http://maps.google.com?q=54.49244318984959,18.540995605388876"
@@ -415,30 +415,30 @@ const HomeContentTabs = () => {
             <div className="mt-2 flex justify-between w-full gap-2">
               <a
                 href="https://www.linkedin.com/company/%C5%9Bwiat-%E2%97%8F-architekt/?viewAsMember=true"
-                className=" flex gap-2 items-center group text-white lg:text-black"
+                className={` flex gap-2 items-center group text-${theme.text} lg:text-${theme.text}`}
               >
                 <i
-                  className="pi pi-linkedin text-white lg:text-gray-500 font-bold lg:group-hover:text-black"
+                  className={`pi pi-linkedin text-${theme.text} lg:text-${theme.text} font-bold lg:group-hover:text-${theme.text}`}
                   style={{ fontSize: "1rem" }}
                 ></i>
                 LinkedIn
               </a>
               <a
                 href="https://www.instagram.com/swiatarchitekt.pl?igsh=MnF3c2NwNXM5MjNj&utm_source=qr"
-                className=" flex gap-2 items-center group text-white lg:text-black"
+                className={` flex gap-2 items-center group text-${theme.text} lg:text-${theme.text}`}
               >
                 <i
-                  className="pi pi-instagram text-white lg:text-gray-500 font-bold lg:group-hover:text-black"
+                  className={`pi pi-instagram text-${theme.text} lg:text-${theme.text} font-bold lg:group-hover:text-${theme.text}`}
                   style={{ fontSize: "1rem" }}
                 ></i>
                 Instagram
               </a>
               <a
                 href="https://www.instagram.com/swiatarchitekt.pl?igsh=MnF3c2NwNXM5MjNj&utm_source=qr"
-                className=" flex gap-2 items-center group text-white lg:text-black"
+                className={` flex gap-2 items-center group text-${theme.text} lg:text-${theme.text}`}
               >
                 <i
-                  className="pi pi-facebook text-white lg:text-gray-900 font-bold group-hover:text-black"
+                  className={`pi pi-facebook text-${theme.text} lg:text-${theme.text}ont-bold group-hover:text-${theme.text}`}
                   style={{ fontSize: "1rem" }}
                 ></i>
                 Facebook
@@ -494,14 +494,15 @@ const HomeContentTabs = () => {
               : "flex  gap-3 lg:gap-0 flex-col w-full justify-start  lg:justify-end lg:w-36  text-end pr-0 xl:w-60  items-end text-left ",
         },
         root: {
-          className:
-            "flex flex-col pt-4 w-full text-white pl-10 lg:px-0 lg:text-black gap-8  lg:gap-2 xl:gap-0  lg:flex-row justify-start items-center h-full",
+          className: `flex flex-col pt-4 w-full text-${theme.text} pl-10 lg:px-0 lg:text-${theme.text} gap-8  lg:gap-2 xl:gap-0  lg:flex-row justify-start items-center h-full`,
         },
       }}
     >
       {/* ABOUT ME */}
       <TabPanel header="Header I" headerTemplate={tabOneHeaderTemplate}>
-        <div className="hidden lg:flex w-full text-sm lg:text-[0.7rem] xl:text-[0.8rem] 	    xl:text-center font-sans">
+        <div
+          className={`hidden  lg:flex w-[85%] m-auto text-sm lg:text-[0.7rem] xl:text-[0.8rem] 	  text-${theme.text}  xl:text-center font-sans`}
+        >
           {language === "en" && (
             <>
               {" "}
@@ -662,8 +663,14 @@ const HomeContentTabs = () => {
 
       {/* OFFER */}
       <TabPanel header="Header I" headerTemplate={tabThreeHeaderTemplate}>
-        <div className="hidden lg:flex w-full text-sm lg:text-[0.7rem]  xl:text-[0.8rem]  xl:text-center font-sans ">
-          <p className={`${language === "pl" ? "hidden" : "block"}`}>
+        <div
+          className={`hidden lg:flex w-full text-sm lg:text-[0.7rem]  xl:text-[0.8rem]  xl:text-center font-sans text-${theme.text}`}
+        >
+          <p
+            className={`text-${theme.text} ${
+              language === "pl" ? "hidden" : "block"
+            }`}
+          >
             Currently, we operate dynamically throughout Poland, offering
             comprehensive design services, starting from the concept through
             construction/execution design, carrying out administrative
@@ -715,7 +722,9 @@ const HomeContentTabs = () => {
         <div className="hidden  lg:block w-full  xl:p-0 text-sm lg:text-[0.7rem]  xl:text-[0.8rem]  text-left  xl:text-left font-sans">
           {/*                                                                                                                                                ail                                                                                                                                              info@swiatarchitekt.pl
            */}
-          <div className="text-left flex-col w-full  gap-5 flex justify-center  ">
+          <div
+            className={`text-${theme.text} text-left flex-col w-full  gap-5 flex justify-center`}
+          >
             <div className=" flex flex-col ">
               <div className="flex flex-col  justify-center items-center  w-full">
                 {language === "en" && (
@@ -775,7 +784,7 @@ const HomeContentTabs = () => {
                 </div>
               )}
               {language === "de" && (
-                <div className="flex flex-col  justify-center items-center  w-full">
+                <div className="flex justify-center items-center  w-full">
                   <p>Adres:</p>
                   <a
                     href="http://maps.google.com?q=54.49244318984959,18.540995605388876"
@@ -802,30 +811,30 @@ const HomeContentTabs = () => {
               <div className="mt-2 flex justify-center w-full gap-2">
                 <a
                   href="https://www.linkedin.com/company/%C5%9Bwiat-%E2%97%8F-architekt/?viewAsMember=true"
-                  className=" flex gap-2 items-center group text-white lg:text-black"
+                  className={` flex gap-2 items-center group text-${theme.text} lg:text-${theme.text}`}
                 >
                   <i
-                    className="pi pi-linkedin text-white lg:text-gray-900 font-bold group-hover:text-black"
+                    className={`pi pi-linkedin text-${theme.text} lg:text-${theme.text} font-bold group-hover:text-${theme.text}`}
                     style={{ fontSize: "1rem" }}
                   ></i>
                   LinkedIn
                 </a>
                 <a
                   href="https://www.instagram.com/swiatarchitekt.pl?igsh=MnF3c2NwNXM5MjNj&utm_source=qr"
-                  className=" flex gap-2 items-center group text-white lg:text-black"
+                  className={` flex gap-2 items-center group text-${theme.text} lg:text-${theme.text}`}
                 >
                   <i
-                    className="pi pi-instagram text-white lg:text-gray-900 font-bold group-hover:text-black"
+                    className={`pi pi-instagram text-${theme.text} lg:text-${theme.text} font-bold group-hover:text-${theme.text}`}
                     style={{ fontSize: "1rem" }}
                   ></i>
                   Instagram
                 </a>
                 <a
                   href="https://www.instagram.com/swiatarchitekt.pl?igsh=MnF3c2NwNXM5MjNj&utm_source=qr"
-                  className=" flex gap-2 items-center group text-black"
+                  className={`flex gap-2 items-center group text-${theme.text}`}
                 >
                   <i
-                    className="pi pi-facebook text-white lg:text-gray-900 font-bold group-hover:text-black"
+                    className={`pi pi-facebook text-${theme.text} lg:text-${theme.text} font-bold group-hover:text-${theme.text}`}
                     style={{ fontSize: "1rem" }}
                   ></i>
                   Facebook
