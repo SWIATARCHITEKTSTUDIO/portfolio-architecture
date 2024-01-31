@@ -24,20 +24,22 @@ const ProjectContentTabs = ({
   svg,
 }: ProjectContentT) => {
   const { state } = useProjectContext();
-  const { language } = state;
+  const { language, theme } = state;
   const [activeIndex, setActiveIndex] = useState(1);
   const tabOneHeaderTemplate = (options: TabPanelHeaderTemplateOptions) => (
     <div
       onClick={options.onClick}
-      className="flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-black hover:scale-110 transform duration-200 ease-in "
+      className={`flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-${theme.text} hover:scale-110 transform duration-200 ease-in`}
     >
-      <h1 className="text-gray-900 font-[400]">
+      <h1 className={`text-${theme.text} font-[400]`}>
         {" "}
         {language === "en" && `Project`}
         {language === "pl" && `Projekt`}
         {language === "de" && `Projekt`}
       </h1>
-      <p className={`text-black text-end text-sm xl:text-xl font-bold   `}>
+      <p
+        className={`text-${theme.text} text-end text-sm xl:text-xl font-bold   `}
+      >
         {title === "Duplex 2" ? (
           <>
             DUPLEX<sup>2</sup>
@@ -52,9 +54,9 @@ const ProjectContentTabs = ({
   const tabTwoHeaderTemplate = (options: TabPanelHeaderTemplateOptions) => (
     <div
       onClick={options.onClick}
-      className="flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-black hover:scale-110 transform duration-200 ease-in "
+      className={`flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-${theme.text} hover:scale-110 transform duration-200 ease-in`}
     >
-      <h1 className="text-gray-900 font-[400]">
+      <h1 className={`text-${theme.text} font-[400]`}>
         {date && (
           <>
             {language === "en" && `Year`}
@@ -63,7 +65,9 @@ const ProjectContentTabs = ({
           </>
         )}
       </h1>
-      <p className={`text-black text-end text-sm xl:text-xl font-bold   `}>
+      <p
+        className={`text-${theme.text} text-end text-sm xl:text-xl font-bold   `}
+      >
         {date}
       </p>
     </div>
@@ -72,9 +76,9 @@ const ProjectContentTabs = ({
   const tabThreeHeaderTemplate = (options: TabPanelHeaderTemplateOptions) => (
     <div
       onClick={options.onClick}
-      className="flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-black hover:scale-110 transform duration-200 ease-in "
+      className={`flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-${theme.text} hover:scale-110 transform duration-200 ease-in`}
     >
-      <h1 className="text-gray-900 font-[400]">
+      <h1 className={`text-${theme.text} font-[400]`}>
         {location && (
           <>
             {language === "en" && `Location`}
@@ -83,7 +87,9 @@ const ProjectContentTabs = ({
           </>
         )}
       </h1>
-      <p className={`text-black text-end text-sm xl:text-xl font-bold   `}>
+      <p
+        className={`text-${theme.text} text-end text-sm xl:text-xl font-bold   `}
+      >
         {location}
       </p>
     </div>
@@ -92,9 +98,9 @@ const ProjectContentTabs = ({
   const tabFourHeaderTemplate = (options: TabPanelHeaderTemplateOptions) => (
     <div
       onClick={options.onClick}
-      className="flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-black hover:scale-110 transform duration-200 ease-in "
+      className={`flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-${theme.text} hover:scale-110 transform duration-200 ease-in`}
     >
-      <h1 className="text-gray-900 font-[400]">
+      <h1 className={`text-${theme.text} font-[400]`}>
         {area && (
           <>
             {language === "en" && `Area`}
@@ -104,7 +110,7 @@ const ProjectContentTabs = ({
         )}
       </h1>
       <p
-        className={`text-black text-end text-sm xl:text-xl font-bold  ${
+        className={`text-${theme.text} text-end text-sm xl:text-xl font-bold  ${
           activeIndex === 0 ? "text-black" : "text-gray-900"
         }`}
       >
@@ -116,9 +122,9 @@ const ProjectContentTabs = ({
   const tabFiveHeaderTemplate = (options: TabPanelHeaderTemplateOptions) => (
     <div
       onClick={options.onClick}
-      className="flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-black hover:scale-110 transform duration-200 ease-in "
+      className={`flex flex-col text-md tracking-[5px] cursor-pointer justify-center items-end  hover:text-${theme.text} hover:scale-110 transform duration-200 ease-in`}
     >
-      <h1 className="text-gray-400 text-end font-semibold">
+      <h1 className={`text-${theme.text} text-end font-semibold`}>
         {coauthor && (
           <>
             {language === "en" && `CO-AUTHOR`}
@@ -129,7 +135,9 @@ const ProjectContentTabs = ({
       </h1>
       <p
         className={` uppercase !text-end ${
-          activeIndex === 0 ? "text-black " : "text-gray-500 "
+          activeIndex === 0
+            ? `text-${theme.text} font-bold`
+            : `text-${theme.text}`
         }`}
       >
         {coauthor}
@@ -157,19 +165,30 @@ const ProjectContentTabs = ({
       }}
     >
       <TabPanel
+        pt={{
+          header: {
+            className: "absolute top-[-50%] right-0 h-auto",
+          },
+        }}
         headerTemplate={svg?.map((svgItem, index) => (
           <img
             key={`svg-${index}`}
             src={svgItem}
             alt=""
-            className="w-24 absolute top-[-50%] right-0 rounded-sm  text-black mb-2"
-            style={{ filter: "brightness(0) saturate(100%)" }}
+            className="w-24 ml-auto  rounded-sm  text-black mb-2"
+            style={{
+              filter: `brightness(${
+                theme.bg == "black" ? "100" : "0"
+              }) saturate(100%)`,
+            }}
           />
         ))}
       ></TabPanel>
       {/* ABOUT ME */}
       <TabPanel header="Header I" headerTemplate={tabOneHeaderTemplate}>
-        <div className=" w-full !text-center text-pretty  text-black text-sm font-sans ">
+        <div
+          className={`w-full !text-center text-pretty  text-${theme.text} text-sm font-sans`}
+        >
           {description}
         </div>
       </TabPanel>

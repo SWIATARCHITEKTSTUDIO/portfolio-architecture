@@ -474,4 +474,5 @@ export const projects: project[] = [
 export enum actionTypes {
   UPDATE_LOADER_TIME = "UPDATE_LOADER_TIME",
   UPDATE_LANGUAGE = "UPDATE_LANGUAGE",
+  UPDATE_THEME = "UPDATE_THEME",
 }

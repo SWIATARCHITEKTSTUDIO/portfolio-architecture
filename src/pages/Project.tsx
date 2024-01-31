@@ -6,6 +6,7 @@ import { project } from "../utils/types";
 import "../Cursor.css";
 import ProjectContentTabs from "../components/ProjectContentTabs";
 import { useProjectContext } from "../context/context";
+import BlackWhiteTheme from "../components/BlackWhiteTheme";
 
 const Project = () => {
   const isDesktopOrLaptop = useMediaQuery({
@@ -18,7 +19,7 @@ const Project = () => {
 
   const { projectId } = useParams();
   const { state, dispatch } = useProjectContext();
-  const { language } = state;
+  const { language, theme } = state;
   const cursor = useRef<HTMLDivElement | null>(null);
 
   const changePosition = (e: React.MouseEvent) => {
@@ -52,7 +53,7 @@ const Project = () => {
         </div>
       </div>
       {/* PROJECT */}
-      <div className="min-h-screen h-screen overflow-hidden max-h-screen relative bg-red-300">
+      <div className="min-h-screen h-screen overflow-hidden max-h-screen relative bg-red-100 ">
         <h1
           style={{
             //  mixBlendMode: "screen"
@@ -66,7 +67,9 @@ const Project = () => {
           </p>
         </h1>
 
-        <div className="grid  grid-cols-1 lg:grid-cols-12 overflow-y-auto  relative gap-0  bg-white w-[100%]">
+        <div
+          className={`grid  grid-cols-1 lg:grid-cols-12 overflow-y-auto  relative gap-0 text-${theme.text}  bg-${theme.bg} w-[100%]`}
+        >
           <div
             className="pl-20  max-h-screen sticky top-0  lg:pl-10 xl:pl-20 flex flex-col  w-screen lg:w-full
 				  justify-start col-span-1  lg:col-span-7
@@ -102,7 +105,7 @@ const Project = () => {
               <div className=" absolute bottom-4 flex gap-0 self-end tracking-[2px] font-semibold text-xs">
                 <p
                   className={` cursor-pointer ${
-                    language === "pl" ? "text-black" : "text-gray-400"
+                    language === "pl" ? `text-${theme.bg}` : "text-gray-400"
                   }`}
                   onClick={() =>
                     dispatch({
@@ -116,7 +119,7 @@ const Project = () => {
                 <p className="text-gray-400">/</p>
                 <p
                   className={` cursor-pointer ${
-                    language === "en" ? "text-black" : "text-gray-400"
+                    language === "en" ? `text-${theme.text}` : "text-gray-400"
                   }`}
                   onClick={() =>
                     dispatch({
@@ -131,7 +134,7 @@ const Project = () => {
                 <p className="text-gray-400">/</p>
                 <p
                   className={` cursor-pointer ${
-                    language === "de" ? "text-black" : "text-gray-400"
+                    language === "de" ? `text-${theme.text}` : "text-gray-400"
                   }`}
                   onClick={() =>
                     dispatch({
@@ -143,6 +146,7 @@ const Project = () => {
                   DE
                 </p>
               </div>
+              <BlackWhiteTheme />
             </div>
 
             {/*  */}

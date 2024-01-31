@@ -4,15 +4,18 @@ import { actionTypes, projects } from "../utils/consts";
 import { project } from "../utils/types";
 import { useProjectContext } from "../context/context";
 import { useState } from "react";
+import BlackWhiteTheme from "../components/BlackWhiteTheme";
 
 const Home = () => {
   const { state, dispatch } = useProjectContext();
-  const { language } = state;
+  const { language, theme } = state;
   const [showProject, setShowProject] = useState("");
 
   return (
     <>
-      <div className="min-h-screen cursor-auto lg:cursor-none h-screen overflow-hidden max-h-screen relative bg-black lg:bg-white font-sans">
+      <div
+        className={`min-h-screen cursor-auto lg:cursor-none h-screen overflow-hidden max-h-screen relative bg-${theme.bg} lg:bg-${theme.bg} font-sans`}
+      >
         <h1
           style={{
             transform: "translate(60%,-50%)",
@@ -79,7 +82,9 @@ const Home = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 mobile-height lg:h-auto lg:grid-cols-12  relative gap-0 bg-black lg:bg-white w-[100%] overflow-y-auto">
+        <div
+          className={`grid grid-cols-1 mobile-height lg:h-auto lg:grid-cols-12  relative gap-0 bg-{${theme.bg}} lg:bg-${theme.bg} w-[100%] overflow-y-auto`}
+        >
           <div
             className="pr-10 relative lg:max-h-screen  md:mt-12 lg:mt-0 lg:sticky top-0 lg:pl-10 xl:pl-20 flex flex-col  w-screen lg:w-full
 				  justify-start col-span-1  lg:col-span-7
@@ -89,7 +94,7 @@ const Home = () => {
             <div className=" absolute bottom-4 hidden lg:flex gap-0 self-end  tracking-[2px] font-semibold text-xs">
               <p
                 className={` cursor-pointer ${
-                  language === "pl" ? "text-black" : "text-gray-400"
+                  language === "pl" ? `text-${theme.text}` : "text-gray-400"
                 }`}
                 onClick={() =>
                   dispatch({
@@ -130,6 +135,7 @@ const Home = () => {
                 DE
               </p>
             </div>
+            <BlackWhiteTheme />
           </div>
           <div className=" flex flex-col   lg:min-h-screen lg:max-h-screen  h-full md:h-screen relative  w-full col-span-1 lg:col-span-5">
             {projects.map((item: project) => (
