@@ -386,7 +386,7 @@ const HomeContentTabs = () => {
               </div>
             )}
             {language === "de" && (
-              <div className="flex flex-col  justify-center items-center  w-full">
+              <div className="flex   justify-between items-center  w-full">
                 <p>Adres:</p>
                 <p>
                   <a
@@ -400,7 +400,7 @@ const HomeContentTabs = () => {
               </div>
             )}
             {language === "pl" && (
-              <div className="flex flex-col  justify-center items-center  w-full">
+              <div className="flex  justify-between items-center  w-full">
                 <p>Adres:</p>
                 <a
                   href="http://maps.google.com?q=54.49244318984959,18.540995605388876"
@@ -784,7 +784,7 @@ const HomeContentTabs = () => {
                 </div>
               )}
               {language === "de" && (
-                <div className="flex flex-col  justify-center items-center  w-full">
+                <div className="flex justify-center items-center  w-full">
                   <p>Adres:</p>
                   <a
                     href="http://maps.google.com?q=54.49244318984959,18.540995605388876"

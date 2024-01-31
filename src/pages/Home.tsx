@@ -33,7 +33,9 @@ const Home = () => {
         </h1>
 
         <h1 className="lg:hidden">
-          <p className=" py-3 font-bold max-[300px]:tracking-[1px] max-[350px]:tracking-[2px] max-[400px]:tracking-[4px] max-[450px]:tracking-[7px] max-[500px]:tracking-[12px] max-[550px]:tracking-[14px] max-[600px]:tracking-[18px] max-[650px]:tracking-[22px] max-[700px]:tracking-[25px] max-[750px]:tracking-[28px] max-[800px]:tracking-[28px] max-[900px]:tracking-[31px] tracking-[35px] bg-white  text-black justify-center  px-3  text-[1.75rem] md:text-[2.25rem] flex items-center w-full">
+          <p
+            className={`py-3 font-bold max-[300px]:tracking-[1px] max-[350px]:tracking-[2px] max-[400px]:tracking-[4px] max-[450px]:tracking-[7px] max-[500px]:tracking-[12px] max-[550px]:tracking-[14px] max-[600px]:tracking-[18px] max-[650px]:tracking-[22px] max-[700px]:tracking-[25px] max-[750px]:tracking-[28px] max-[800px]:tracking-[28px] max-[900px]:tracking-[31px] tracking-[35px] bg-${theme.bg}  text-${theme.text} ml-2 justify-center  px-3  text-[1.75rem] md:text-[2.25rem] flex items-center w-full`}
+          >
             ŚWIAT <span className="text-4xl"> ●</span> ARCHITEKT
           </p>
         </h1>
@@ -108,7 +110,7 @@ const Home = () => {
               <p className="text-gray-400">/</p>
               <p
                 className={` cursor-pointer ${
-                  language === "en" ? "text-black" : "text-gray-400"
+                  language === "en" ? `text-${theme.text}` : "text-gray-400"
                 }`}
                 onClick={() =>
                   dispatch({
@@ -155,12 +157,13 @@ const Home = () => {
                       src={`/images/${item.en.img[0]}`}
                       alt={item.en.img[0]}
                     />
-                    {/* <div className="2xl:w-10/12 w-11/12  flex justify-between  items-center mt-32  "></div> */}
                   </section>
                   <div
                     className={`${
                       showProject === item.en.title ? "grid" : "hidden"
-                    }  grid-cols-1 gap-y-4 sm:gap-2  sm:grid-cols-12  items-center text-white`}
+                    }  grid-cols-1 gap-y-4 sm:gap-2  sm:grid-cols-12  items-center text-${
+                      theme.text
+                    }`}
                   >
                     <div className="text-justify col-span-1 sm:col-span-8 w-full px-10  sm:py-10   flex justify-start h-full text-xs">
                       {item[language]?.description}

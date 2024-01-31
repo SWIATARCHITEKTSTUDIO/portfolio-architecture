@@ -20,11 +20,11 @@
 
 .mobile-logo {
   position: absolute;
-  top: 1.25rem;
+  /* top: 0.8rem; */
   /* left: 2.5rem; */
 
   /* width: fit-content; */
-  height: fit-content;
+  /* height: fit-content; */
 }
 
 .mobile-height {

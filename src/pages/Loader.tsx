@@ -47,13 +47,24 @@ const Loader = () => {
 					</div>
 				</> */}
 
-        <h1
-          className={`text-${theme.text}  flex relative  lg:hidden w-full  px-6 h-full text-xl min-[420px]:text-2xl md:text-4xl  justify-center   font-bold tracking-[6px] font-sans`}
+        {/* <h1
+          className={`text-${theme.text}  flex relative  lg:hidden w-full h-full justify-center   font-bold tracking-[6px] font-sans bg-red-500`}
         >
-          <p className="absolute !left-0 flex sm:text-3xl text-xl mobile-logo items-center justify-center max-[300px]:tracking-[1px] max-[350px]:tracking-[2px] max-[400px]:tracking-[4px] max-[450px]:tracking-[7px] max-[500px]:tracking-[12px] max-[550px]:tracking-[14px] max-[600px]:tracking-[18px] max-[650px]:tracking-[22px] max-[700px]:tracking-[25px] max-[750px]:tracking-[28px] max-[800px]:tracking-[28px] max-[900px]:tracking-[31px] tracking-[35px] text-[1.75rem] md:text-[2.25rem] w-[100%] ">
+          <p className="ml-2 absolute !left-0 flex sm:text-3xl text-xl mobile-logo py-3 font-bold max-[300px]:tracking-[1px] max-[350px]:tracking-[2px] max-[400px]:tracking-[4px] max-[450px]:tracking-[7px] max-[500px]:tracking-[12px] max-[550px]:tracking-[14px] max-[600px]:tracking-[18px] max-[650px]:tracking-[22px] max-[700px]:tracking-[25px] max-[750px]:tracking-[28px] max-[800px]:tracking-[28px] max-[900px]:tracking-[31px] tracking-[35px] bg-${theme.bg}  text-${theme.text} ml-2 justify-center  px-3  text-[1.75rem] md:text-[2.25rem] flex items-center w-full ">
             ŚWIAT <span className="text-4xl"> ●</span> ARCHITEKT
           </p>
-        </h1>
+        </h1> */}
+        <div
+          className={`text-${theme.text}  flex relative  lg:hidden w-full h-full justify-center   font-bold font-sans`}
+        >
+          <h1 className="lg:hidden">
+            <p
+              className={`py-3 font-bold max-[300px]:tracking-[1px] max-[350px]:tracking-[2px] max-[400px]:tracking-[4px] max-[450px]:tracking-[7px] max-[500px]:tracking-[12px] max-[550px]:tracking-[14px] max-[600px]:tracking-[18px] max-[650px]:tracking-[22px] max-[700px]:tracking-[25px] max-[750px]:tracking-[28px] max-[800px]:tracking-[28px] max-[900px]:tracking-[31px] tracking-[35px] bg-${theme.bg}  text-${theme.text} ml-2 justify-center  px-3  text-[1.75rem] md:text-[2.25rem] flex items-center w-full`}
+            >
+              ŚWIAT <span className="text-4xl"> ●</span> ARCHITEKT
+            </p>
+          </h1>
+        </div>
       </div>
     </>
   );

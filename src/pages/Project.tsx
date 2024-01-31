@@ -166,6 +166,7 @@ const Project = () => {
                     src={`/images/${image}`}
                     // src=""
                     alt={image}
+                    className="project-image"
                   />
                   <div className="2xl:w-10/12 w-11/12   flex justify-between  items-center mt-32  "></div>
                 </section>
