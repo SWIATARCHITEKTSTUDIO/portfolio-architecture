@@ -1,4 +1,3 @@
-import { useContext } from "react";
 import { useProjectContext } from "../context/context";
 import { actionTypes } from "../utils/consts";
 
@@ -11,7 +10,7 @@ const BlackWhiteTheme = () => {
 
   return (
     <div
-      className={`text-${state.theme.text}  z-10 absolute top-4 flex gap-0 self-end tracking-[2px] font-semibold text-xs`}
+      className={`text-${state.theme.text}  z-10 absolute top-4 flex gap-0 self-start left-6 lg:left-auto lg:self-end tracking-[2px] font-semibold text-xs`}
     >
       <div className="flex items-center justify-center gap-[1px]">
         <button

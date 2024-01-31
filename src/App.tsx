@@ -10,6 +10,8 @@ import { actionTypes } from "./utils/consts";
 function App() {
   const cursor = useRef<HTMLDivElement | null>(null);
   const { state, dispatch } = useProjectContext();
+  const { theme } = state;
+
   const [seconds, setSeconds] = useState(state.loaderTiming);
   const [active, setActive] = useState(true);
   const changePosition = (e: React.MouseEvent) => {
@@ -49,7 +51,9 @@ function App() {
         </div>
       </div>
       {active && state.loaderTiming !== 0 ? (
-        <div className="flex w-full h-screen justify-center bg-white items-center">
+        <div
+          className={`flex w-full h-screen justify-center bg-${theme.bg} items-center`}
+        >
           <Loader />
         </div>
       ) : (

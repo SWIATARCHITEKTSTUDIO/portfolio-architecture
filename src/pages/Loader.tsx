@@ -1,19 +1,26 @@
-const Loader = () => {
-	return (
-		<>
-			<div className=" text-black  w-full relative flex flex-col h-full justify-center items-center  text-right bg-white">
-				<h1
-					style={{
-						transform: "translate(60%,-50%)",
-					}}
-					className="text-black  col-span-1 absolute top-[50%] z-50 hidden lg:flex w-full   px-6 h-fit   text-xl min-[420px]:text-2xl md:text-4xl  justify-start   font-bold tracking-[6px] font-sans"
-				>
-					<p className="flex items-center w-full text-xl min-[420px]:text-2xl xl:text-4xl  justify-start">
-						ŚWIAT <span className="text-4xl"> ●</span> ARCHITEKT
-					</p>
-				</h1>
+import { useProjectContext } from "../context/context";
 
-				{/* <>
+const Loader = () => {
+  const { state } = useProjectContext();
+  const { theme } = state;
+
+  return (
+    <>
+      <div
+        className={` text-${theme.text}  w-full relative flex flex-col h-full justify-center items-center  text-right bg-${theme.bg}`}
+      >
+        <h1
+          style={{
+            transform: "translate(60%,-50%)",
+          }}
+          className={`text-${theme.text}  col-span-1 absolute top-[50%] z-50 hidden lg:flex w-full   px-6 h-fit   text-xl min-[420px]:text-2xl md:text-4xl  justify-start   font-bold tracking-[6px] font-sans`}
+        >
+          <p className="flex items-center w-full text-xl min-[420px]:text-2xl xl:text-4xl  justify-start ">
+            ŚWIAT <span className="text-4xl"> ●</span> ARCHITEKT
+          </p>
+        </h1>
+
+        {/* <>
 					<div className=" lg:flex justify-end pointer-events-none hidden  lg:pointer-events-auto">
 						<section className="flex w-5/12 justify-start cursor-pointer relative    bg-cover bg-fixed bg-center   items-center">
 							<img
@@ -40,14 +47,16 @@ const Loader = () => {
 					</div>
 				</> */}
 
-				<h1 className="text-black  flex relative  lg:hidden w-full  px-6 h-full text-xl min-[420px]:text-2xl md:text-4xl  justify-center   font-bold tracking-[6px] font-sans">
-					<p className="flex sm:text-3xl text-xl mobile-logo items-center w-full justify-center">
-						ŚWIAT <span className="text-4xl"> ●</span> ARCHITEKT
-					</p>
-				</h1>
-			</div>
-		</>
-	);
+        <h1
+          className={`text-${theme.text}  flex relative  lg:hidden w-full  px-6 h-full text-xl min-[420px]:text-2xl md:text-4xl  justify-center   font-bold tracking-[6px] font-sans`}
+        >
+          <p className="absolute !left-0 flex sm:text-3xl text-xl mobile-logo items-center justify-center max-[300px]:tracking-[1px] max-[350px]:tracking-[2px] max-[400px]:tracking-[4px] max-[450px]:tracking-[7px] max-[500px]:tracking-[12px] max-[550px]:tracking-[14px] max-[600px]:tracking-[18px] max-[650px]:tracking-[22px] max-[700px]:tracking-[25px] max-[750px]:tracking-[28px] max-[800px]:tracking-[28px] max-[900px]:tracking-[31px] tracking-[35px] text-[1.75rem] md:text-[2.25rem] w-[100%] ">
+            ŚWIAT <span className="text-4xl"> ●</span> ARCHITEKT
+          </p>
+        </h1>
+      </div>
+    </>
+  );
 };
 
 export default Loader;

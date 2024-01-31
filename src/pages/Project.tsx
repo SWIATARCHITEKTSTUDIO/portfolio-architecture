@@ -105,7 +105,7 @@ const Project = () => {
               <div className=" absolute bottom-4 flex gap-0 self-end tracking-[2px] font-semibold text-xs">
                 <p
                   className={` cursor-pointer ${
-                    language === "pl" ? `text-${theme.bg}` : "text-gray-400"
+                    language === "pl" ? `text-${theme.text}` : "text-gray-400"
                   }`}
                   onClick={() =>
                     dispatch({
