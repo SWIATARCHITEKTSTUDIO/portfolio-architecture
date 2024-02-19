@@ -62,3 +62,7 @@
   white-space: nowrap;
   letter-spacing: calc(100% - 1rem);
 }
+
+.bg-black {
+  background-color: black;
+}
