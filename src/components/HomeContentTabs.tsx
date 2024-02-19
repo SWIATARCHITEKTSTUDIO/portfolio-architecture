@@ -484,7 +484,8 @@ const HomeContentTabs = () => {
       pt={{
         inkbar: { className: "hidden" },
         navContainer: {
-          className: " order-first lg:order-last w-full flex justify-end ",
+          className:
+            " order-first lg:order-last w-full flex justify-end   w-auto ",
         },
 
         nav: {

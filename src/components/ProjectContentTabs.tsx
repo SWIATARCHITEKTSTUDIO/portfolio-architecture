@@ -167,21 +167,25 @@ const ProjectContentTabs = ({
       <TabPanel
         pt={{
           header: {
-            className: "absolute top-[-50%] right-0 h-auto",
+            className: "relative  right-0 w-24 h-24",
           },
         }}
         headerTemplate={svg?.map((svgItem, index) => (
-          <img
-            key={`svg-${index}`}
-            src={svgItem}
-            alt=""
-            className="w-24 ml-auto  rounded-sm  text-black mb-2"
-            style={{
-              filter: `brightness(${
-                theme.bg == "black" ? "100" : "0"
-              }) saturate(100%)`,
-            }}
-          />
+          <>
+            <div className="absolute -top-4 left-0">
+              <img
+                key={`svg-${index}`}
+                src={svgItem}
+                alt=""
+                className="w-24 h-24 ml-auto  rounded-sm  text-black shapossss"
+                style={{
+                  filter: `brightness(${
+                    theme.bg == "black" ? "100" : "0"
+                  }) saturate(100%)`,
+                }}
+              />
+            </div>
+          </>
         ))}
       ></TabPanel>
       {/* ABOUT ME */}

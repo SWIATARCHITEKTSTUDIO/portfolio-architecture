@@ -39,50 +39,6 @@ const Home = () => {
             ŚWIAT <span className="text-4xl"> ●</span> ARCHITEKT
           </p>
         </h1>
-        <div className=" absolute right-10 p-2 bottom-10 z-30 flex lg:hidden gap-0 self-end items-center h-10 bg-black tracking-[2px] font-semibold text-xs">
-          <p
-            className={` cursor-pointer ${
-              language === "pl" ? "text-white" : "text-gray-400"
-            }`}
-            onClick={() =>
-              dispatch({
-                type: actionTypes.UPDATE_LANGUAGE,
-                payload: "pl",
-              })
-            }
-          >
-            PL
-          </p>
-          <p className="text-gray-400">/</p>
-          <p
-            className={` cursor-pointer ${
-              language === "en" ? "text-white" : "text-gray-400"
-            }`}
-            onClick={() =>
-              dispatch({
-                type: actionTypes.UPDATE_LANGUAGE,
-                payload: "en",
-              })
-            }
-          >
-            EN
-          </p>
-
-          <p className="text-gray-400">/</p>
-          <p
-            className={` cursor-pointer ${
-              language === "de" ? "text-white" : "text-gray-400"
-            }`}
-            onClick={() =>
-              dispatch({
-                type: actionTypes.UPDATE_LANGUAGE,
-                payload: "de",
-              })
-            }
-          >
-            DE
-          </p>
-        </div>
 
         <div
           className={`grid grid-cols-1 mobile-height lg:h-auto lg:grid-cols-12  relative gap-0 bg-{${theme.bg}} lg:bg-${theme.bg} w-[100%] overflow-y-auto`}
@@ -125,7 +81,7 @@ const Home = () => {
               <p className="text-gray-400">/</p>
               <p
                 className={` cursor-pointer ${
-                  language === "de" ? "text-black" : "text-gray-400"
+                  language === "de" ? `text-${theme.text}` : "text-gray-400"
                 }`}
                 onClick={() =>
                   dispatch({
@@ -137,6 +93,51 @@ const Home = () => {
                 DE
               </p>
             </div>
+            <div className="z-10 font-semibold text-xs lg:hidden absolute top-12 flex gap-0 self-start left-[2.5rem] lg:left-auto lg:self-end  ">
+              <p
+                className={` cursor-pointer font-semibold text-xs ${
+                  language === "pl" ? `text-${theme.text}` : "text-gray-400"
+                }`}
+                onClick={() =>
+                  dispatch({
+                    type: actionTypes.UPDATE_LANGUAGE,
+                    payload: "pl",
+                  })
+                }
+              >
+                PL
+              </p>
+              <p className="text-gray-400">/</p>
+              <p
+                className={`font-semibold text-xs cursor-pointer ${
+                  language === "en" ? `text-${theme.text}` : "text-gray-400"
+                }`}
+                onClick={() =>
+                  dispatch({
+                    type: actionTypes.UPDATE_LANGUAGE,
+                    payload: "en",
+                  })
+                }
+              >
+                EN
+              </p>
+
+              <p className="text-gray-400">/</p>
+              <p
+                className={` cursor-pointer font-semibold text-xs ${
+                  language === "de" ? `text-${theme.text}` : "text-gray-400"
+                }`}
+                onClick={() =>
+                  dispatch({
+                    type: actionTypes.UPDATE_LANGUAGE,
+                    payload: "de",
+                  })
+                }
+              >
+                DE
+              </p>
+            </div>
+
             <BlackWhiteTheme />
           </div>
           <div className=" flex flex-col   lg:min-h-screen lg:max-h-screen  h-full md:h-screen relative  w-full col-span-1 lg:col-span-5">
